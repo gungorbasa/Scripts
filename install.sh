@@ -102,6 +102,11 @@ defaults write com.apple.Safari "com.apple.Safari.ContentPageGroupIdentifier.Web
 echo 'alias ohmyzsh="atom ~/.oh-my-zsh"' >> ~/.zshrc
 echo 'alias zshconfig="atom ~/.zshrc"' >> ~/.zshrc
 
+######################### New commands for convenience #########################
+echo 'alias cartupdate="carthage bootstrap --platform ios --cache-builds --no-use-binaries --new-resolver"' >> ~/.zshrc
+echo 'alias zshconfig="atom ~/.zshrc"export PATH="/usr/local/opt/ruby/bin:$PATH"' >> ~/.zshrc
+################################################################################
+
 
 killall Finder
 echo "Done!"
