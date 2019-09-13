@@ -1,6 +1,17 @@
 # Ask for the administrator password upfront.
 echo "Setting ZSH as shell..."
 chsh -s /bin/zsh
+
+read -p "Would you like to create a new ssh key?" -n 1 -r
+echo    # (optional) move to a new line
+if [[ $REPLY =~ ^[Yy]$ ]]
+then
+    sh ssh_create.sh
+    echo "We ran the pbcopy command on your ssh file."
+    echo "Please, go and paste to Github :)"
+fi
+
+
 # Keep-alive: update existing `sudo` time stamp until the script has finished.
 while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
 #
