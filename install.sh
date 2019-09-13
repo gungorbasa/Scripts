@@ -106,6 +106,11 @@ echo 'alias zshconfig="atom ~/.zshrc"' >> ~/.zshrc
 echo 'alias cartupdate="carthage bootstrap --platform ios --cache-builds --no-use-binaries --new-resolver"' >> ~/.zshrc
 echo 'alias zshconfig="atom ~/.zshrc"export PATH="/usr/local/opt/ruby/bin:$PATH"' >> ~/.zshrc
 ################################################################################
+echo 'export PATH="/usr/local/opt/ruby@2.5/bin:$PATH"' >> ~/.zshrc
+echo 'export BUNDLE_PATH=~/.gems' ~/.zshrc
+echo 'ENABLE_CORRECTION="true"' ~/.zshrc
+echo 'export LC_ALL=en_US.UTF-8' ~/.zshrc
+echo 'export LANG=en_US.UTF-8' ~/.zshrc
 
 
 killall Finder
