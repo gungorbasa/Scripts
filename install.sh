@@ -82,6 +82,7 @@ cask=(
   intellij-idea-ce
   android-studio
   slack
+  brooklyn
 )
 # Install apps to /Applications
 # Default is: /Users/$user/Applications
