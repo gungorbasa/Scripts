@@ -81,6 +81,7 @@ cask=(
   skype
   java
   intellij-idea-ce
+  homebrew/cask-versions/adoptopenjdk8
   android-studio
   android-sdk
   slack
@@ -92,6 +93,11 @@ echo "installing apps with Cask..."
 brew cask install --appdir="/Applications" ${cask[@]}
 brew cask alfred link
 brew cask cleanup
+
+# Some Android stuff
+brew install ant
+brew install maven
+brew install gradle
 brew cleanup
 
 #"Check for software updates daily, not just once per week"
@@ -123,7 +129,10 @@ echo 'ENABLE_CORRECTION="true"' ~/.zshrc
 echo 'export LC_ALL=en_US.UTF-8' ~/.zshrc
 echo 'export LANG=en_US.UTF-8' ~/.zshrc
 ################################################################################
-echo 'export ANDROID_SDK_ROOT="/usr/local/share/android-sdk' ~/.zshrc
+echo 'export ANDROID_SDK_ROOT=/usr/local/share/android-sdk' ~/.zshrc
+echo 'export ANT_HOME=/usr/local/opt/ant' ~/.zshrc
+echo 'export MAVEN_HOME=/usr/local/opt/maven' ~/.zshrc
+echo 'export GRADLE_HOME=/usr/local/opt/gradle' ~/.zshrc
 ################################################################################
 
 killall Finder
