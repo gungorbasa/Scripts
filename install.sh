@@ -17,6 +17,7 @@ while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
 #
 # echo "Installing xcode Developer Tools"
 xcode-select --install
+sudo xcodebuild -license accept
 
 # Check for Homebrew,
 # Install if we don't have it
@@ -81,6 +82,7 @@ cask=(
   java
   intellij-idea-ce
   android-studio
+  android-sdk
   slack
   brooklyn
 )
@@ -90,9 +92,6 @@ echo "installing apps with Cask..."
 brew cask install --appdir="/Applications" ${cask[@]}
 brew cask alfred link
 brew cask cleanup
-
-echo "Installing android-sdk"
-brew install android-sdk
 brew cleanup
 
 #"Check for software updates daily, not just once per week"
@@ -123,7 +122,9 @@ echo 'export BUNDLE_PATH=~/.gems' ~/.zshrc
 echo 'ENABLE_CORRECTION="true"' ~/.zshrc
 echo 'export LC_ALL=en_US.UTF-8' ~/.zshrc
 echo 'export LANG=en_US.UTF-8' ~/.zshrc
-
+################################################################################
+echo 'export ANDROID_SDK_ROOT="/usr/local/share/android-sdk' ~/.zshrc
+################################################################################
 
 killall Finder
 echo "Done!"
