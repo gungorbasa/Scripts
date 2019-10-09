@@ -36,6 +36,7 @@ echo "Installing brew git utilities..."
 brew install git-extras
 brew install legit
 brew install git-flow
+brew install mas
 
 echo "Installing other brew stuff..."
 brew install tree
@@ -43,6 +44,11 @@ brew install wget
 brew install mackup
 brew install node
 brew install unrar
+
+# Below code only works if XCode is previously purchased with this Apple Id
+echo "Installing XCode"
+mas install 497799835
+
 
 
 # Install ruby-build and rbenv
