@@ -37,6 +37,7 @@ brew install git-extras
 brew install legit
 brew install git-flow
 brew install mas
+brew install carthage
 
 echo "Installing other brew stuff..."
 brew install tree
@@ -130,15 +131,15 @@ echo 'alias cartupdate="carthage bootstrap --platform ios --cache-builds --no-us
 echo 'alias zshconfig="atom ~/.zshrc"export PATH="/usr/local/opt/ruby/bin:$PATH"' >> ~/.zshrc
 ################################################################################
 echo 'export PATH="/usr/local/opt/ruby@2.5/bin:$PATH"' >> ~/.zshrc
-echo 'export BUNDLE_PATH=~/.gems' ~/.zshrc
-echo 'ENABLE_CORRECTION="true"' ~/.zshrc
-echo 'export LC_ALL=en_US.UTF-8' ~/.zshrc
-echo 'export LANG=en_US.UTF-8' ~/.zshrc
+echo 'export BUNDLE_PATH=~/.gems' >> ~/.zshrc
+echo 'ENABLE_CORRECTION="true"' >> ~/.zshrc
+echo 'export LC_ALL=en_US.UTF-8' >> ~/.zshrc
+echo 'export LANG=en_US.UTF-8' >> ~/.zshrc
 ################################################################################
-echo 'export ANDROID_SDK_ROOT=/usr/local/share/android-sdk' ~/.zshrc
-echo 'export ANT_HOME=/usr/local/opt/ant' ~/.zshrc
-echo 'export MAVEN_HOME=/usr/local/opt/maven' ~/.zshrc
-echo 'export GRADLE_HOME=/usr/local/opt/gradle' ~/.zshrc
+echo 'export ANDROID_SDK_ROOT=/usr/local/share/android-sdk' >> ~/.zshrc
+echo 'export ANT_HOME=/usr/local/opt/ant' >> ~/.zshrc
+echo 'export MAVEN_HOME=/usr/local/opt/maven' >> ~/.zshrc
+echo 'export GRADLE_HOME=/usr/local/opt/gradle' >> ~/.zshrc
 ################################################################################
 
 killall Finder
